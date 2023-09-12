@@ -1,0 +1,117 @@
+'abc' + 'def' # - Catenate two strings
+'test' + str(123) # - Catenate str + int (the + sign expects a string)
+'testing' * 3 # - Repeat the word 'testing' 3 tiems
+print("{0} {1} {2}".format(var1, var2, var3))
+print("%s %s %s" % (var1, var2, var3))
+
+
+'''Search in String'''
+'cde' in 'abcdef' # Returns True if 'cde' is a substring
+'cde' not in 'xyz' # Returns True if 'cde' is not a substring
+
+
+""" Verify Class of Variable """
+isinstance("test", str) # Will return True if "test" is a string
+isinstance(2, int) # Will return True if 2 is an int
+
+'''String Indexing'''
+myString = 'testing123'
+myString[4] # - Character at index 4 (answer: 'i')
+myString[::-1] # - Reverse string by slicing backwards
+
+
+'''String Methods'''
+len(myString) # - Print length of myString (answer: 10)
+myString = 'This is a sentence'
+myString.find('This') # - Returns index of first letter of 'This' in string
+myString.count('is') # - Returns number of occurances of substring 'is'
+myString.replace('old','new') # - Replace all occurances of 'old' with 'new'
+myString.split(';') # - Every word in myString become items in a list | delimeter is ;
+myString.strip() # - Copy of string with leading and trailing blank spaces removed
+myString.splitlines() # - Returns list of sentnences, similar to .readlines()
+myString.capitalize() # - Capitalizes first letter in string
+myString.upper() # - Returns capitalized copy of string
+myString.lower() # - Returns lowercase copy of string
+'{0} plus {1} is {2}'.format(1,1,2) # - Curly braces are replaced by numbers
+' - ',join(myLst) # - insert - in between every item in the list
+
+''' String Table Mapping '''
+import string
+myTable = str.maketrans(string.punctuation,' '*32) # - Map all punctuation characters to a space
+myString.translate(myTable) # - Replace all punctuation in string wiht a space
+
+''' String Module '''
+import string
+ascii_letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+ascii_lowercase = 'abcdefghijklmnopqrstuvwxyz'
+ascii_uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+digits = '0123456789'
+hexdigits = '0123456789abcdefABCDEF'
+octdigits = '01234567'
+printable = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTU...
+punctuation = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
+whitespace = ' \t\n\r\x0b\x0c'
+
+#########################################
+# - Remove blank lines from text
+#########################################
+
+myText = """\
+This is a sentence
+
+There's an empty space above this line.
+Test123...
+""".splitlines()
+myText = ' '.join(myText).split()
+
+
+#########################################
+# - Reverse IP address
+#########################################
+ip_address_reversed = '15.1.168.192'
+ip_address = ".".join(ip_address_reversed.split(".")[::-1])
+
+
+
+#####################################################
+# - Replace each space in a text line with a delimineter
+#####################################################
+
+text = """\
+This is line number one
+This is line number two
+This is line number three
+"""
+
+for line in text.splitlines():
+    line = "-".join(line.split())
+    print(line)
+    
+"""
+Output will look like this:
+
+This-is-line-number-one
+This-is-line-number-two
+This-is-line-number-three
+"""
+
+# - True, is variable is type string
+myBool = isinstance(myVariable, str)
+
+
+#####################################################
+# - Remove punctuation from string
+#####################################################
+
+import string
+
+"Some!Random=Test@".translate(str.maketrans('', '', string.punctuation))
+
+or
+
+"Some!Random=Test@".translate(None, string.punctuation)
+
+or
+
+exclude = set(string.punctuation)
+s = ''.join(ch for ch in s if ch not in exclude)

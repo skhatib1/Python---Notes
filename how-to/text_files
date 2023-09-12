@@ -1,0 +1,69 @@
+''' Opening File and Modes '''
+infile = open("filename.txt", "r") # - read mode
+infile = open("filename.txt", "w") # - overwrite mode
+infile = open("filename.txt", "a") # - append mode
+infile = open("filename.txt", "r+") # - read and write mode
+infile = open("filename.txt", "t") # - text mode
+infile = open("filename.txt", "b") # - binary mode
+
+''' Reading from file '''
+infile.read() # - Read all file contents and return as string
+infile.readline() # - Read until the first 'new line" or until end of content, return as string
+infile.readlines() # - Read all lines, return as list of lines
+outfile.write(s) # write string to file outfile
+file.close() # Close the file
+
+''' File Content Length  '''
+len(myContents) # - Number of characters in the file
+len(myContents.split(' ')) # - Number of words in file
+len(myContents.split('\n'))# - Total number of lines in file
+
+''' Writing to File '''
+myFile = open('fileName.txt','w') # - Open file (w = overwrites; a = append)
+myFile.write('Enter this string') # - Write string to file
+myFile.close() # - Close file
+
+
+############################################
+# Create new file if it does not exist
+# Append to file if it does exist
+############################################
+
+myFile = open("test_file.txt", "a")
+myFile.write("Sample Text")
+
+
+
+#########################################
+# - Remove blank lines from text
+#########################################
+
+myText = """\
+This is a sentence
+
+There's an empty space above this line.
+Test123...
+""".splitlines()
+myText = ' '.join(myText).split()
+
+
+
+#########################################
+# Remove Blank Lines from textd AND strip trailing and preceeding spaces in each line
+#########################################
+
+cmd = """\
+interface Gig1/1
+  description test123
+  switchport mode access
+  switchport access vlan 100
+  no shutdown
+"""
+cmd_list = list()
+for line in cmd.splitlines():
+    if line.strip():
+        cmd_list.append(line.strip())
+
+for line in cmd_list:
+    print(line)
+

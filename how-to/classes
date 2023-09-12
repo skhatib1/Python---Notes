@@ -1,0 +1,111 @@
+''' Create New Class '''
+# - Constructor
+
+class Point: # - This is a class
+    'Class that represents points in the plane'
+    
+     myVariable = 'this is a random variable'
+    
+    def setx(self, xcoord): # - This is a method
+    'Set x coordinate of point to xcoord'
+        self.x = xcoord
+    
+    def sety(self, ycoord): # - This is a method
+    'Set y coordiante of point to ycoord'
+        self.y = ycoord
+    
+    def get(self): # - This is a method
+    'Return a tuple with x and y coordinates of the point.'
+        return (self.x, self.y)
+    
+    def move(self, dx, dy): # - This is a method
+    'Change the x and y coordinates by dx and dy.'
+        self.x += dx
+        self.y += dy
+        Point.myVariable = 'This is how you would reference myVariable in a method.'
+    
+    
+''' Overloaded Operators '''
+
+class Queue:
+    
+    def __init__(self, xcoord = None, ycoord = None): # - called automatically when object is created
+    'Class queue takes two arguments. Assigning default to 0 enables use with no parameters.'
+    if xcoord == None:
+        self.xcoord = 0
+    else:
+        self.xcoord = xcoord
+    self.x = xcoord
+    self.y = ycoord
+    
+    def __repr__(self):
+    'return canonical string representation'
+    return "Display({}, {})".format(item1, item2)
+    
+    def __eq__(self, other):
+    'Self == other is they have teh same coordinates'
+    return self.x == other.x and self.y == other.y
+    
+    def __getitem__(self,key):
+    'return value of item at specified index.'
+    return self.q[key]
+
+    def __setitem__(self,key, item):
+    'Reassign value of item in specified index
+    self.q[key] = item
+
+    def __next__(self):
+    'Returns next Queue item; if no next item, reaises StopIteration exception'
+    if self.index < 0:
+        raise StopIteration():
+    
+    res = self.q[self.index]
+    
+    pass
+
+    def __iter__(self):
+    'returns Queue iterator'
+    return QueueIterator.self()
+    
+    def __add__(self):
+    'Addition / Concatenation'
+    pass
+    
+    def __sub__(self):
+    'Subtraction'
+    pass
+    
+    def __mul__(self):
+    'Multiplication / Self-concatenation'
+    pass
+    
+    def __truediv__(self):
+    'Division'
+    pass
+    
+    def __floordiv__(self):
+    'Intigier division'
+    pass
+    
+    def __mod__(self):
+    pass
+    
+    def __contains__(self, item)
+    ' the in operator'
+    return item >= self.a and item <= self.b
+    
+    
+    
+    
+
+''' Class Excpetion '''
+
+    class EmptyQueueError(Exception):
+        pass
+    
+    class myClass():
+    # example of implementation of error exception
+    
+    def myFunciton(self):
+    if len(self) == 0:
+        raise EmtyQueueError('DisplayMessage')

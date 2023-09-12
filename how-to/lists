@@ -1,0 +1,37 @@
+''' Lists Indexing '''
+pets = ['cat','dog','fish'] # - List contains three items
+pets[0] # - Print item at index 0 (answer: 'cat']
+pets[0] = 'eagle' # - reassign value at index 0 to 'eagle'
+
+
+'''Search in List'''
+'dog' in pets # - True if item is found in the list
+'bird' not in pets # - True if item is not found in list
+
+
+'''List Functions'''
+myNumbers = [1,2,3,4]
+max(myNumbers) # - Longest item in list / max value (answer: 4)
+min(myNumbers) # - Smallest item in list / min value (answer: 1)
+sum(myNumbers) # - Sum of values in list (answer: 10)
+len(myNumbers) # - Num of items in list (answer: 4)
+list(enumerate(myList)) # - return list, each pair is [index,value-at-index]
+
+
+'''List Methods'''
+myList.append(['item1','item2']) # - Appends new list as a sublist inside of the original list
+myList.append(["item1", "item2"]) # - Combines both lists as one, with no sublists
+myList.count('item') # - Return num of occurances 'dog' is in list
+myList.index('item') # - Return index of 1st occurance of 'dog'
+myList.insert(2,'item') # - Insert 'mouse' at inded 2
+myList.remove(item) # - Removes first occurance of item in the list
+myList.pop(1) # - Remove item at index 1 and returns that item
+myList.sort() # - sort items in list
+myList.reverse() # - reverse items in list
+"_".join(myList) # - Seperate all white space in string with "_"
+
+
+''' Two-Dimensional Lists '''
+myList = [['Zig','Zag'],['Is','Practicing'],['Python','List']] #3 lists in 1
+myList[2][0] # Points to list at inde 2, and then index 0 of that list
+# Answer: 'Python'

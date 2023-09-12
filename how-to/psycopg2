@@ -1,0 +1,41 @@
+import psycopg2
+
+# - Connecting to Database
+connection = psycopg2.connect(
+            host = "127.0.0.1",
+            database = "mydatabase",
+            user = "postgres",
+            password = "postgres")
+
+# - Cursor
+cursor = connection.cursor()
+
+# - Insert Data with Cursor  
+cursor.execute("""\
+INSERT INTO myschema.mac_table 
+(
+vlan_id,
+mac_address,
+interface_id
+)
+VALUES
+(
+'123', 
+'aaaa.bbbb.cccc',
+'Po200'
+);""")
+
+# - Execute Query
+cursor.execute("SELECT * FROM myschema.mac_table;")
+
+rows = cursor.fetchall()
+print(rows)
+
+# - Commit Changes 
+connection.commit()
+
+# - Close the Cursor
+cursor.close()
+    
+# - Close the connection 
+connection.close()

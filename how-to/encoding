@@ -1,0 +1,6 @@
+''' Character encoding '''
+ord('a') # - Return ASCII code (answer is 97)
+chr(97) # - Returns character assoiated with ASCII code 97 (answer is 'a')
+hex("a") - # Returns hex code
+print("{:b}".format(10)) # - Outputs the number in binary
+print("{:d}".format(10)) # - Outputs the number in decimal

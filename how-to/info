@@ -1,0 +1,9 @@
+''' Info about module '''
+import string
+dir(string)
+help(string)
+
+
+''' Module Attributes '''
+import math  # - first import the module
+dir(math)  # - view attributes of the module

@@ -1,0 +1,37 @@
+''' For Loop '''
+
+# Loop ten times
+for x in range(10): 
+    pass
+
+
+# Iterate through each item in the list
+for item in myList: 
+    pass
+
+# Iterate through list by index
+for index in range(len(myList)): 
+    pass
+
+
+# Nested Loop
+for index1 in range(len(lst)):  
+    for index2 in range(index1,len(lst)):      
+        pass
+    pass
+
+
+# Loop through each item in list, and get pair of index to value
+for index,value in enumerate(myList): # enumerate retruns tuple (index,value) pair
+    print(index,value) # - for index,value seperates the tuple into two halves
+    pass
+
+# - Loop through list in reverse
+for item in reversed(myList): 
+    print(item)
+    pass 
+    
+#  - compare line1 to line2 up to end of file 
+text_list = text.splitlines()
+for index, line in enumerate(text_list[:-1]):
+  next_line = text_list[index + 1]

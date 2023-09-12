@@ -1,0 +1,22 @@
+''' Prompt User for Input '''
+myStr = input('Enter str: ') # Prompt user to input info, input will be taken as a string
+myNum = eval(input('Enter num: ')) # Will only accept int or float as input
+myInt = int(input("Enter number: ")) # Will only accept int as input
+myFloat = float(input("Enter number: ")) # Will interpret numeric input as float
+
+''' Validating string input '''
+myInput.isalpha() # - True if all characters of input are str, else False
+myInput.isdigit() # - True if all characters of input are positive integers, else False
+myInput.isalnum() # - True if characters of input consists of int and str only, else False
+
+'''Validate input is string '''
+while True:
+
+    userInput = input("Please enter a string: ")
+    # If user inputs string
+    if userInput.isalpha():
+        break # Validate user input
+    else :
+        print('Message for user')
+        userInput = str(input(" You did not enter a string.\n Please enter a string: "))
+    pass

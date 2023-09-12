@@ -1,0 +1,23 @@
+from turtle import *
+
+Screen() # -Create a blank canvas to draw on
+Turtle() # - Place the Turtle on the canvas at coordinates (0,0)
+forward(100) # - Move Turtle forward 100 pixels
+left(100) # - Move Turtle left 100 pixels
+right(90) # - Rotate Turtle 90 degrees to the right
+undo() # - Undo the prvious move
+goto(x, y) # - Move turtle to coordinates (x, y)
+setx(x) #- Set the turtle’s first coordinate to x
+sety(y) # - Set the turtle’s second coordinate to y
+setheading(angle) # -  Set orientation of turtle to angle, given in degrees; Angle 0 means east, 90 is north, and so on
+circle(100) # - Draw a circle with a radius of 100 pixels
+circle(radius, angle) # - Draw only the part the circle (see above) corresponding to angle
+dot(diameter, color) # - Draw a dot with given diameter and color
+penup() # - Pull pen up; no drawing when moving
+pendown() # - Put pen down; drawing when moving
+pensize(5) # - Set the pen line thickness to 5 pixles
+pencolor("blue") # - Set the pen color to bue
+bgcolor("white") # - Set background color to white
+clearscreen() # - Clear the canvas
+turtles() # - Returns the list of all turtles in the screen
+bye() # - Closes the canvas

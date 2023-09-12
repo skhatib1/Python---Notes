@@ -1,0 +1,19 @@
+''' Sets '''
+mySet = {'basketball','soccer','swimming'} # - sets also use curly braces, but do not have commas
+setList = list(set(myList)) # - Convert list into set, and then set into list, assign result to value setList
+
+''' Set Operations '''
+'basketball' in mySet # - True if 'basketball' is in mySet, else False
+'tennis' not in mySet # - True if 'tennis' is not in mySet, else False
+len(mySet) # - Returns the size of mySet
+mySet1 == mySet2 # - True if both, mySet1 and mySet2, contain the same elements, else False
+mySet1 != mySet3 # - True if mySet1 is not equal to mySet3, else False
+mySet11 | mySet22 # - Returns the union of mySet11 and mySet 22 (combines them into one set)
+mySet33 & mySet44 # - Returns the values that the two sets have in common
+mySet1 - mySet2 # - Returns the differences between the two sets
+
+''' Set Methods '''
+mySet.add('running') # - adds 'running' to myset
+mySet.remove('running') # - Removes 'running' from myset
+mySet.clear() # - Empty the set so that it is empty
+mySet.update("add this item to set") # - Add item to set

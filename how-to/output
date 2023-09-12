@@ -1,0 +1,8 @@
+''' Formatted Output Print '''
+print(x, y, z, sep = ' - ') # - Insert a - in between x and y and z
+print(x,y,z, end = '!') # - End x, y and z with a !
+print(n, r, name, sep='\n') # - Print n, r, and name each on a new line
+print("My name is {0}. My age is {1}".format('ZigZag',21))
+print("{:b}".format(10)) # - Outputs the number in binary
+print("{:d}".format(10)) # - Outputs the number in decimal
+print("{0:10} {1:10} {2:10}".format(item1, item1))
